@@ -22,7 +22,10 @@ export const Home = () => {
         <TodoForm />
       </div>
       <div className="todos-list">
-        {todos && todos.map((todo) => <TodoCard key={todo._id} todo={todo} />)}
+        {todos &&
+          todos.map((todo) => {
+            return <TodoCard todo={todo} key={todo._id} />;
+          })}
       </div>
     </main>
   );
